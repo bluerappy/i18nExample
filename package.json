@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "i18n-js": "^3.1.0",
+    "i18n-t": "^1.0.1",
+    "i18next": "^13.0.0",
+    "json-loader": "^0.5.7",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-i18next": "^8.3.9",
+    "react-scripts": "2.1.1",
+    "roddeh-i18n": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

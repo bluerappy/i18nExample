@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {t} from './locales/i18n'
 import './App.css';
+import en from './locales/en.json';
+import fr from './locales/fr.json';
+import { setLocale } from './locales/i18n';
 
 class App extends Component {
-  render() {
+  state = {
+    locale : "fr"
+  }
+  render() { 
+    console.log("en",en)
+    console.log("fr",fr)
+    console.log(this.state.locale)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <button onClick={() => this.setState({ locale : "en"})}>
+        TRANSLATE
+      </button>
+        <p>
+        {t('test.PEOPLE', {locale : this.state.locale})}
+        </p>
       </div>
     );
   }
